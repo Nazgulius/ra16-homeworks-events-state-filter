@@ -1,37 +1,34 @@
 import { useState } from 'react';
 import ImgList from './ImgList.js';
-import React from 'react';  
 
 export default function Portfolio () {
-  let selected = "All";
-  let state = { stateIn: selected };
   const filtersList = ["All", "Websites", "Flayers", "Business Cards"];
+  const [filterP, setFilter] = useState("All");
 
-  const [filter, setFilter] = useState(state);
-
-  // setFilter() {
-  //   selected = filtersList.filter(s => { s === selected });
-    
-  // }
-
-  const stateConsole = (state) => {
-    // setFilter({ filter: state });
-    console.log(state);
+  const onSelectFilter = (filter) => {  
+    setFilter(filter);  
   };
+  
+  const filteredImages = () => {
+    if (filterP === "All") {
+      return(ImgList);
+    }
 
+    return ImgList.filter((image) => image.category === filterP);
+  };
 
   return (
     <>      
       <div className='toolbar'>
-        <button onClick={() => stateConsole("All")} className="btn">{filtersList[0]}</button>
-        <button onClick={() => stateConsole("Websites")} className='btn'>{filtersList[1]}</button>
-        <button onClick={() => stateConsole("Flayers")} className='btn'>{filtersList[2]}</button>
-        <button onClick={() => stateConsole("Business Cards")} className='btn'>{filtersList[3]}</button>
+        {filtersList.map((filter) => (  
+          <button key={filter} onClick={() => onSelectFilter(filter)} className='btn'>{filter}</button>  
+        ))} 
       </div>
       <div className='imgLists'>
-       {ImgList.map((imgage) => (<img src={imgage.img} key={imgage.category} alt="img" className='imgItem'/>))}
+        {filteredImages().map((image) => (  
+          <img src={image.img} alt="img" className='imgItem' key={image.img} />  
+        ))} 
       </div>
     </>
   );
-
 }

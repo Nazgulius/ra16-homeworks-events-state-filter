@@ -1,11 +1,13 @@
+import mon from './img/mon.jpg'
 import img200 from './img/200.jpg'
 import emi_haze from './img/emi_haze.jpg'
 import codystretch from './img/codystretch.jpg'
 import Triangle_003 from './img/Triangle_003.jpg'
 
+// список сделал и так и сяк, и из локальных файлов и по ссылкам
 const ImgList = [
  {
-    img: img200,
+    img: mon,
     category: "Business Cards"
   }, {
     img: img200,
@@ -47,7 +49,7 @@ const ImgList = [
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/emi_haze.jpg",
     category: "Websites"
   }, {
-    img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/transmission.jpg",
+    img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/transmission_2.jpg",
     category: "Business Cards"
   }, {
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/Triangle_350x197_1.jpg",
