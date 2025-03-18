@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -34,9 +34,30 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 2em;  
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.toolbar {
+  margin-bottom: 20px;
+}
+
+.btn:nth-child(n + 2) {
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background-color: #616161;
+  color: white;
+}
+
+.imgLists {
+  display:block;  
+}
+
+.imgItem:nth-child(n + 2) {
+  margin-left: 10px;
 }
