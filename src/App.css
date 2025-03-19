@@ -28,6 +28,11 @@
   color: black;
 }
 
+.active {
+  background-color: white;
+  color: black;
+}
+
 .imgLists {
   display:block;  
 }
